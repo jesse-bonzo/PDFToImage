@@ -13,7 +13,7 @@ public class PDFToImageApplication extends Application {
   public void start(Stage primaryStage) throws IOException {
     FXMLLoader fxmlLoader =
         new FXMLLoader(PDFToImageApplication.class.getResource("main-view.fxml"));
-    Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+    Scene scene = new Scene(fxmlLoader.load(), 800, 600);
     scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
     primaryStage.setTitle("PDF to Image");
     primaryStage.setScene(scene);

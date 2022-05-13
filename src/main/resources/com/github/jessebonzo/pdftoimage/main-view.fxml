@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.github.jessebonzo.pdftoimage.MainController"
-            prefWidth="800"
-            prefHeight="600"
-            minWidth="320"
-            minHeight="240"
-            fx:id="pane">
-    <MenuBar AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.github.jessebonzo.pdftoimage.MainController"
+      fx:id="pane"
+      prefWidth="1024"
+      prefHeight="768"
+      minWidth="800"
+      minHeight="600"
+      styleClass="panel-primary">
+    <MenuBar fx:id="menuBar" minHeight="25" VBox.vgrow="NEVER">
         <Menu text="Menu">
             <MenuItem text="Open PDF" onAction="#openPDF"/>
+            <MenuItem fx:id="savePNG" text="Save PNG" onAction="#savePNG" disable="true"/>
         </Menu>
     </MenuBar>
-</AnchorPane>
+    <ListView fx:id="listView" VBox.vgrow="ALWAYS">
+
+    </ListView>
+</VBox>
